@@ -16,7 +16,7 @@ public class Section3 {
     //Additional ex 1.
     public static boolean verification(List<Integer> numbers){
         return numbers.stream()
-                .allMatch(n -> n > 0);
+                .allMatch(n -> n >= 0); // .nonMatch(n -> n < 0);
     }
 
     //Additional ex 2.
