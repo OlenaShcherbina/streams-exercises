@@ -19,7 +19,8 @@ public class Section5 {
     public static List<String> firstThree(List<String> list){
             return list.stream()
                     .filter(s -> s.length() > 5 && s.charAt(0) == 'A')
-                    .limit(3).collect(Collectors.toList());
+                    .limit(3)
+                    .collect(Collectors.toList());
     }
 
     // Additional Ex. 3

@@ -18,12 +18,10 @@ public class Section4 {
 
     // Additional ex.1
     public static void demonstrationFirstVsAny(List<Integer> nums){
-        System.out.println("Find first: " + nums.stream()
-                        .parallel()
+        System.out.println("Find first: " + nums.parallelStream()
                 .findFirst());
 
-        System.out.println("Find any: " + nums.stream()
-                .parallel()
+        System.out.println("Find any: " + nums.parallelStream()
                 .findAny());
     }
     // Additional ex.2
