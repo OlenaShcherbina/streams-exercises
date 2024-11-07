@@ -2,12 +2,20 @@ class Employee implements Comparable{
     String name;
     int age;
     double salary;
+    String jobTitle;
     // Constructor, getters, and setters
 
     public Employee(String name, int age, double salary) {
         this.name = name;
         this.age = age;
         this.salary = salary;
+        this.jobTitle = "Employee";
+    }
+    public Employee(String name, int age, double salary, String jobTitle) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+        this.jobTitle = jobTitle;
     }
 
     public String getName() {
@@ -34,6 +42,14 @@ class Employee implements Comparable{
         this.salary = salary;
     }
 
+    public String getJobTitle() {
+        return jobTitle;
+    }
+
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
+    }
+
     @Override
     public int compareTo(Object o) {
         if(this.getSalary() == ((Employee) o).getSalary()){
@@ -48,6 +64,7 @@ class Employee implements Comparable{
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", salary=" + salary +
+                ", jobTitle=" + jobTitle +
                 '}';
     }
 }
